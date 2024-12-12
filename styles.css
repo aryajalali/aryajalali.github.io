@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-size: large;
+    margin: 0;
+}
+.profile-photo {
+width: 100%;
+height: auto;
+max-width: 300px; /* Max width of the photo */
+max-height: 600px; /* Max height of the photo */
+border-radius: 50% / 70%; /* Creates the oval shape */
+object-fit: cover;
+}
+
+ul {
+    margin-left: 1em;
+}
+
+.sidebar {
+position: fixed;
+top: 20px;
+left: 0;
+width: 300px; /* Increase sidebar width */
+padding: 20px;
+color: black;
+border-radius: 10px;
+text-align: center;
+margin-left: 5em;
+}
+.sidebar a {
+    color: blue;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+.sidebar a:hover {
+    text-decoration: underline;
+}
+.main-content {
+    margin-left: 30em;
+    margin-right: 12em;
+    padding: 20px;
+}
+h2 {
+    color: #495057;
+}
+section {
+    margin-bottom: 30px;
+}
+ul {
+    padding-left: 20px;
+}
+@media (max-width: 1200px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .main-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .profile-photo {
+        margin-bottom: 20px;
+        max-width: 500px; /* Max width of the photo */
+        max-height: 700px;
+        
+    }
+}
