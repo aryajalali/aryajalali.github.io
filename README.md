@@ -1,1 +1,1 @@
-# Built my personal website from scratch with some help from ChatGPT—no templates, just raw creativity and coding skills. (Happiest people be the most depressed ones)
+# Built my personal website from scratch with some help from ChatGPT (100 % ChatGPT). (Happiest people be the most depressed ones)
