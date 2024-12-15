@@ -1,1 +1,1 @@
-# The Personal website that I built alognside ChatGpt (I refuse to use Jekyll)
+# Built my personal website from scratch with some help from ChatGPT—no templates, just raw creativity and coding skills. (Happiest people be the most depressed ones)
