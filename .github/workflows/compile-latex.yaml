@@ -21,11 +21,13 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-extra
 
-    - name: Compile CV
-      run: pdflatex latex/cv.tex  # Correct path to the cv.tex file
+    - name: Navigate to latex folder and compile CV
+      run: |
+        cd latex  # Navigate to the folder where cv.tex and education.tex are located
+        pdflatex cv.tex  # Compile cv.tex from within the latex folder
 
     - name: Upload PDF
       uses: actions/upload-artifact@v3
       with:
         name: cv-pdf
-        path: ./latex/cv.pdf  # Correct path to the generated PDF
+        path: ./latex/cv.pdf  # Path to the generated PDF in the latex folder
