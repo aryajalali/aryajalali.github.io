@@ -1,9 +1,11 @@
-name: Build and Deploy CV 
+name: Build and Deploy CV
 
 on:
   push:
     branches:
       - master  # Make sure this matches your branch
+    paths:
+      - 'latex/**'  # Trigger the workflow only if files inside the 'latex' folder change
 
 jobs:
   build:
@@ -39,4 +41,3 @@ jobs:
         git push origin master  # Push to your repository (replace master with your branch name if necessary)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's token to commit changes
-
