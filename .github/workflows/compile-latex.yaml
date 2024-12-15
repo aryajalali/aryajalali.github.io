@@ -3,11 +3,11 @@ name: Build and Deploy CV
 on:
   push:
     branches:
-      - master  # Make sure the branch name matches your current branch
+      - master  # Make sure this matches your branch
 
 jobs:
   build:
-    runs-on: ubuntu-24.04  # Use ubuntu-24.04 instead of ubuntu-latest
+    runs-on: ubuntu-24.04  # Use the correct Ubuntu version
 
     steps:
     - name: Checkout code
@@ -23,11 +23,20 @@ jobs:
 
     - name: Navigate to latex folder and compile CV
       run: |
-        cd latex  # Navigate to the folder where cv.tex and education.tex are located
-        pdflatex cv.tex  # Compile cv.tex from within the latex folder
+        cd latex  # Go into the LaTeX folder
+        pdflatex cv.tex  # Compile LaTeX file to PDF
 
-    - name: Upload PDF
-      uses: actions/upload-artifact@v3
-      with:
-        name: cv-pdf
-        path: ./latex/cv.pdf  # Path to the generated PDF in the latex folder
+    - name: Move PDF to root folder
+      run: |
+        mv latex/cv.pdf ./cv.pdf  # Move the generated PDF to the root folder
+
+    - name: Commit and push PDF to GitHub
+      run: |
+        git config --global user.name "Your Name"
+        git config --global user.email "youremail@example.com"
+        git add cv.pdf  # Add the PDF to the staging area
+        git commit -m "Add generated CV PDF"  # Commit the file
+        git push origin master  # Push to your repository (replace master with your branch name if necessary)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's token to commit changes
+
