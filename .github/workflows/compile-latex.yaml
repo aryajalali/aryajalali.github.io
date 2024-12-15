@@ -1,0 +1,42 @@
+name: Compile LaTeX CV
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull request targeting main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up LaTeX environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+    - name: Compile LaTeX to PDF
+      run: |
+        pdflatex -output-directory=latex /latex/cv.tex
+
+    - name: Upload compiled PDF as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: cv-pdf
+        path: latex/cv.pdf
+
+    - name: Commit and push the generated PDF
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git add latex/cv.pdf
+        git commit -m "Update CV PDF"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

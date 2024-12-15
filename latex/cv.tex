@@ -1,0 +1,202 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.45in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+
+\newcommand{\projectSpace}{-18pt}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\classesList}[4]{
+	\item\small{
+		{#1 #2 #3 #4 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textbf{\small #2} \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\github}[2][Github]{
+\faGithub \hspace{1mm}  \href{#2}{#1} \hspace{4mm}
+}
+
+\newcommand{\website}[2][Website]{
+	\faPager \hspace{1mm}  \href{#2}{#1} \hspace{4mm}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & \textbf{\small #2}\\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand{\publication}[5]{
+\resumeItem{#1, "#2," \textit{#3}, #4, #5.}
+}
+
+\newcommand{\course}[3]{
+\hspace*{0.2cm} #1 \hspace*{0.4cm} & #2 \hspace*{3cm} & #3\\
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+	
+	%----------HEADING----------
+	% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+		%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+		% \end{tabular*}
+	
+	\begin{center}
+		{\Huge \scshape Arya Jalali} \\ \vspace{1pt}
+		 \href{mailto:aryajalali79@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{aryajalali79@gmail.com}} ~ 
+		\href{mailto:arya.jalali@yale.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{arya.jalali@yale.edu}} ~ 
+		% \href{mailto:arya.jalali79@sharif.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{arya.jalali79@sharif.edu}} ~  \\
+		\small \raisebox{-0.1\height}\faPhone\ (+98)9129350417 ~
+		% \href{https://www.linkedin.com/in/arya-jalali-3128b9257/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Arya Jalali}}  ~
+		\href{https://github.com/nothatcreative5}{\raisebox{-0.2\height}\faGithub\ \underline{nothatcreative5}}
+        \href{https://scholar.google.com/citations?user=LjLrXXEAAAAJ&hl=en}{\raisebox{-0.2\height}\faGraduationCap\  \underline{Google Scholar}}
+% 		\href{https://amirmahdinamjoo.com}{\raisebox{-0.2\height}\faPager \ \underline{amirmahdinamjoo.com}}
+		\vspace{-8pt}
+	\end{center}
+	
+	
+	%-----------EDUCATION-----------
+	\input{education.tex}
+	
+	
+	%-----------HONORS AND AWARDS-----------
+	\input{honors.tex}
+
+	%-----------RESEARCH INTERESTS-----------
+	\input{interests.tex}
+
+	%-----------EXPERIENCE-----------
+	\input{experience.tex}
+	% \vspace{-16pt}
+	
+	%-----------ACADEMIC SERVICE------
+	% \input{service.tex}
+
+         % -----------PUBLICATIONS-----------
+	\input{publications.tex}
+	% \vspace{-19pt}
+	%-----------PROJECTS-----------
+	\input{projects.tex}
+	% \vspace{-5pt}
+
+	
+	%-----------COURSEWORK-----------
+	\input{coursework.tex}
+	\vspace{-23pt}
+	
+	\input{self}
+	\vspace{-23pt}
+
+
+
+	%
+	%-----------PROGRAMMING SKILLS-----------
+	\input{skills.tex}
+	\vspace{-21pt}
+	
+	
+	%-----------LANGUAGES---------------
+	\input{languages.tex}
+\vspace{-30pt}
+	
+	
+\end{document}
