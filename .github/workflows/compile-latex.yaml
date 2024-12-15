@@ -7,20 +7,23 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04  # Updated runner version
+    runs-on: ubuntu-24.04  # Use ubuntu-24.04 instead of ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: List directory contents
+      run: ls -alh
+
     - name: Set up LaTeX
       run: sudo apt-get install -y texlive-latex-base texlive-latex-extra
 
     - name: Compile CV
-      run: pdflatex cv.tex
+      run: pdflatex latex/cv.tex  # Correct path to the cv.tex file
 
     - name: Upload PDF
       uses: actions/upload-artifact@v3
       with:
         name: cv-pdf
-        path: ./cv.pdf
+        path: ./latex/cv.pdf  # Correct path to the generated PDF
