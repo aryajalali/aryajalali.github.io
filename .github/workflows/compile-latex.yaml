@@ -1,4 +1,4 @@
-name: Build and Deploy CV
+name: Build and Deploy CV 
 
 on:
   push:
