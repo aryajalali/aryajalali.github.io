@@ -9,8 +9,8 @@ body {
 width: 100%;
 height: auto;
 max-width: 300px; /* Max width of the photo */
-max-height: 600px; /* Max height of the photo */
-border-radius: 50% / 70%; /* Creates the oval shape */
+max-height: 300px; /* Max height of the photo */
+border-radius: 50%; /* Creates the oval shape */
 object-fit: cover;
 }
 
@@ -65,10 +65,9 @@ ul {
         margin-left: 0;
         margin-right: 0;
     }
-    .profile-photo {
+    /* .profile-photo {
         margin-bottom: 20px;
         max-width: 500px; /* Max width of the photo */
         max-height: 700px;
-        
-    }
+    } */
 }
